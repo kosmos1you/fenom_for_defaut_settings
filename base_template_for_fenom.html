@@ -2,6 +2,20 @@
 <html lang="{$_modx->config.cultureKey}">
 <head>
     {include 'head'}
+<!-- CODE FOR CHANK "head"-->
+<!-- CODE FOR CHANK "head" - start -->
+<base href="{$_modx->config.site_url}">
+<meta charset="{$_modx->config.modx_charset}">
+<title>{'seoPro.title' | placeholder ?: $_modx->resource.pagetitle}</title>
+{if $_modx->resource.description}
+    <meta name="description" content="{$_modx->resource.description}">
+{else}
+    <meta name="description" content="{$_modx->resource.pagetitle}. Наш адрес: г. Ростов-на-Дону, ул. Вавилова, 68. Тел. +7 (928) 150-30-30, режим работы пн-вс с 10:00 до 20:00.">
+{/if}
+{if 'seoPro.keywords' | placeholder}
+    <meta name="keywords" content="{'seoPro.keywords' | placeholder}">
+{/if}
+<!-- CODE FOR CHANK "head" - end -->
 </head>
 <body>
     {include 'absolute'}
